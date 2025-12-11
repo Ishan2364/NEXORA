@@ -1,0 +1,629 @@
+{
+    "1": {
+        "product_sku": "1",
+        "online_stock": 12,
+        "store_locations": [
+            {
+                "store_id": "DEL-R01",
+                "store_name": "Forever 21 \u2013 DLF Saket",
+                "stock_count": 3,
+                "click_and_collect_enabled": true
+            },
+            {
+                "store_id": "DEL-R02",
+                "store_name": "Jaypore \u2013 Dwarka Vegas Mall",
+                "stock_count": 2,
+                "click_and_collect_enabled": true
+            }
+        ],
+        "last_updated": "2025-12-10T13:50:47.860290Z"
+    },
+    "2": {
+        "product_sku": "2",
+        "online_stock": 8,
+        "store_locations": [
+            {
+                "store_id": "DEL-R03",
+                "store_name": "TASVA \u2013 South Extension I",
+                "stock_count": 4,
+                "click_and_collect_enabled": true
+            },
+            {
+                "store_id": "DEL-R04",
+                "store_name": "Pantaloons \u2013 Pacific Mall Tagore Garden",
+                "stock_count": 1,
+                "click_and_collect_enabled": true
+            }
+        ],
+        "last_updated": "2025-12-10T13:50:47.860290Z"
+    },
+    "3": {
+        "product_sku": "3",
+        "online_stock": 15,
+        "store_locations": [
+            {
+                "store_id": "DEL-R05",
+                "store_name": "Van Heusen \u2013 Connaught Place",
+                "stock_count": 2,
+                "click_and_collect_enabled": true
+            },
+            {
+                "store_id": "DEL-R01",
+                "store_name": "Forever 21 \u2013 DLF Saket",
+                "stock_count": 3,
+                "click_and_collect_enabled": true
+            }
+        ],
+        "last_updated": "2025-12-10T13:50:47.860290Z"
+    },
+    "4": {
+        "product_sku": "4",
+        "online_stock": 10,
+        "store_locations": [
+            {
+                "store_id": "DEL-R02",
+                "store_name": "Jaypore \u2013 Dwarka Vegas Mall",
+                "stock_count": 4,
+                "click_and_collect_enabled": true
+            },
+            {
+                "store_id": "DEL-R03",
+                "store_name": "TASVA \u2013 South Extension I",
+                "stock_count": 2,
+                "click_and_collect_enabled": true
+            }
+        ],
+        "last_updated": "2025-12-10T13:50:47.860290Z"
+    },
+    "5": {
+        "product_sku": "5",
+        "online_stock": 7,
+        "store_locations": [
+            {
+                "store_id": "DEL-R04",
+                "store_name": "Pantaloons \u2013 Pacific Mall Tagore Garden",
+                "stock_count": 1,
+                "click_and_collect_enabled": true
+            },
+            {
+                "store_id": "DEL-R05",
+                "store_name": "Van Heusen \u2013 Connaught Place",
+                "stock_count": 2,
+                "click_and_collect_enabled": true
+            }
+        ],
+        "last_updated": "2025-12-10T13:50:47.860290Z"
+    },
+    "6": {
+        "product_sku": "6",
+        "online_stock": 18,
+        "store_locations": [
+            {
+                "store_id": "DEL-R01",
+                "store_name": "Forever 21 \u2013 DLF Saket",
+                "stock_count": 2,
+                "click_and_collect_enabled": true
+            },
+            {
+                "store_id": "DEL-R02",
+                "store_name": "Jaypore \u2013 Dwarka Vegas Mall",
+                "stock_count": 3,
+                "click_and_collect_enabled": true
+            }
+        ],
+        "last_updated": "2025-12-10T13:50:47.860290Z"
+    },
+    "7": {
+        "product_sku": "7",
+        "online_stock": 14,
+        "store_locations": [
+            {
+                "store_id": "DEL-R03",
+                "store_name": "TASVA \u2013 South Extension I",
+                "stock_count": 2,
+                "click_and_collect_enabled": true
+            },
+            {
+                "store_id": "DEL-R04",
+                "store_name": "Pantaloons \u2013 Pacific Mall Tagore Garden",
+                "stock_count": 3,
+                "click_and_collect_enabled": true
+            }
+        ],
+        "last_updated": "2025-12-10T13:50:47.860290Z"
+    },
+    "8": {
+        "product_sku": "8",
+        "online_stock": 9,
+        "store_locations": [
+            {
+                "store_id": "DEL-R05",
+                "store_name": "Van Heusen \u2013 Connaught Place",
+                "stock_count": 1,
+                "click_and_collect_enabled": true
+            },
+            {
+                "store_id": "DEL-R01",
+                "store_name": "Forever 21 \u2013 DLF Saket",
+                "stock_count": 4,
+                "click_and_collect_enabled": true
+            }
+        ],
+        "last_updated": "2025-12-10T13:50:47.860290Z"
+    },
+    "9": {
+        "product_sku": "9",
+        "online_stock": 6,
+        "store_locations": [
+            {
+                "store_id": "DEL-R02",
+                "store_name": "Jaypore \u2013 Dwarka Vegas Mall",
+                "stock_count": 2,
+                "click_and_collect_enabled": true
+            },
+            {
+                "store_id": "DEL-R03",
+                "store_name": "TASVA \u2013 South Extension I",
+                "stock_count": 1,
+                "click_and_collect_enabled": true
+            }
+        ],
+        "last_updated": "2025-12-10T13:50:47.860290Z"
+    },
+    "10": {
+        "product_sku": "10",
+        "online_stock": 11,
+        "store_locations": [
+            {
+                "store_id": "DEL-R04",
+                "store_name": "Pantaloons \u2013 Pacific Mall Tagore Garden",
+                "stock_count": 3,
+                "click_and_collect_enabled": true
+            },
+            {
+                "store_id": "DEL-R05",
+                "store_name": "Van Heusen \u2013 Connaught Place",
+                "stock_count": 2,
+                "click_and_collect_enabled": true
+            }
+        ],
+        "last_updated": "2025-12-10T13:50:47.860290Z"
+    },
+    "101": {
+        "product_sku": "101",
+        "online_stock": 10,
+        "store_locations": [
+            {
+                "store_id": "DEL-J01",
+                "store_name": "Forever 21 \u2013 DLF Saket",
+                "stock_count": 3,
+                "click_and_collect_enabled": true
+            },
+            {
+                "store_id": "DEL-J02",
+                "store_name": "Jaypore \u2013 Dwarka Vegas Mall",
+                "stock_count": 2,
+                "click_and_collect_enabled": true
+            }
+        ],
+        "last_updated": "2025-12-10T13:50:47.860290Z"
+    },
+    "102": {
+        "product_sku": "102",
+        "online_stock": 14,
+        "store_locations": [
+            {
+                "store_id": "DEL-J03",
+                "store_name": "TASVA \u2013 South Extension I",
+                "stock_count": 2,
+                "click_and_collect_enabled": true
+            },
+            {
+                "store_id": "DEL-J04",
+                "store_name": "Pantaloons \u2013 Pacific Mall Tagore Garden",
+                "stock_count": 3,
+                "click_and_collect_enabled": true
+            }
+        ],
+        "last_updated": "2025-12-10T13:50:47.860290Z"
+    },
+    "103": {
+        "product_sku": "103",
+        "online_stock": 8,
+        "store_locations": [
+            {
+                "store_id": "DEL-J05",
+                "store_name": "Van Heusen \u2013 Connaught Place",
+                "stock_count": 2,
+                "click_and_collect_enabled": true
+            },
+            {
+                "store_id": "DEL-J01",
+                "store_name": "Forever 21 \u2013 DLF Saket",
+                "stock_count": 1,
+                "click_and_collect_enabled": true
+            }
+        ],
+        "last_updated": "2025-12-10T13:50:47.860290Z"
+    },
+    "104": {
+        "product_sku": "104",
+        "online_stock": 12,
+        "store_locations": [
+            {
+                "store_id": "DEL-J02",
+                "store_name": "Jaypore \u2013 Dwarka Vegas Mall",
+                "stock_count": 3,
+                "click_and_collect_enabled": true
+            },
+            {
+                "store_id": "DEL-J03",
+                "store_name": "TASVA \u2013 South Extension I",
+                "stock_count": 2,
+                "click_and_collect_enabled": true
+            }
+        ],
+        "last_updated": "2025-12-10T13:50:47.860290Z"
+    },
+    "105": {
+        "product_sku": "105",
+        "online_stock": 17,
+        "store_locations": [
+            {
+                "store_id": "DEL-J04",
+                "store_name": "Pantaloons \u2013 Pacific Mall Tagore Garden",
+                "stock_count": 2,
+                "click_and_collect_enabled": true
+            },
+            {
+                "store_id": "DEL-J05",
+                "store_name": "Van Heusen \u2013 Connaught Place",
+                "stock_count": 1,
+                "click_and_collect_enabled": true
+            }
+        ],
+        "last_updated": "2025-12-10T13:50:47.860290Z"
+    },
+    "201": {
+        "product_sku": "201",
+        "online_stock": 9,
+        "store_locations": [
+            {
+                "store_id": "DEL-S01",
+                "store_name": "Forever 21 \u2013 DLF Saket",
+                "stock_count": 2,
+                "click_and_collect_enabled": true
+            },
+            {
+                "store_id": "DEL-S02",
+                "store_name": "Jaypore \u2013 Dwarka Vegas Mall",
+                "stock_count": 1,
+                "click_and_collect_enabled": true
+            }
+        ],
+        "last_updated": "2025-12-10T13:50:47.860290Z"
+    },
+    "202": {
+        "product_sku": "202",
+        "online_stock": 15,
+        "store_locations": [
+            {
+                "store_id": "DEL-S03",
+                "store_name": "TASVA \u2013 South Extension I",
+                "stock_count": 3,
+                "click_and_collect_enabled": true
+            },
+            {
+                "store_id": "DEL-S04",
+                "store_name": "Pantaloons \u2013 Pacific Mall Tagore Garden",
+                "stock_count": 2,
+                "click_and_collect_enabled": true
+            }
+        ],
+        "last_updated": "2025-12-10T13:50:47.860290Z"
+    },
+    "203": {
+        "product_sku": "203",
+        "online_stock": 7,
+        "store_locations": [
+            {
+                "store_id": "DEL-S05",
+                "store_name": "Van Heusen \u2013 Connaught Place",
+                "stock_count": 1,
+                "click_and_collect_enabled": true
+            },
+            {
+                "store_id": "DEL-S01",
+                "store_name": "Forever 21 \u2013 DLF Saket",
+                "stock_count": 2,
+                "click_and_collect_enabled": true
+            }
+        ],
+        "last_updated": "2025-12-10T13:50:47.860290Z"
+    },
+    "204": {
+        "product_sku": "204",
+        "online_stock": 12,
+        "store_locations": [
+            {
+                "store_id": "DEL-S02",
+                "store_name": "Jaypore \u2013 Dwarka Vegas Mall",
+                "stock_count": 3,
+                "click_and_collect_enabled": true
+            },
+            {
+                "store_id": "DEL-S03",
+                "store_name": "TASVA \u2013 South Extension I",
+                "stock_count": 2,
+                "click_and_collect_enabled": true
+            }
+        ],
+        "last_updated": "2025-12-10T13:50:47.860290Z"
+    },
+    "205": {
+        "product_sku": "205",
+        "online_stock": 18,
+        "store_locations": [
+            {
+                "store_id": "DEL-S04",
+                "store_name": "Pantaloons \u2013 Pacific Mall Tagore Garden",
+                "stock_count": 2,
+                "click_and_collect_enabled": true
+            },
+            {
+                "store_id": "DEL-S05",
+                "store_name": "Van Heusen \u2013 Connaught Place",
+                "stock_count": 1,
+                "click_and_collect_enabled": true
+            }
+        ],
+        "last_updated": "2025-12-10T13:50:47.860290Z"
+    },
+    "206": {
+        "product_sku": "206",
+        "online_stock": 13,
+        "store_locations": [
+            {
+                "store_id": "DEL-S01",
+                "store_name": "Forever 21 \u2013 DLF Saket",
+                "stock_count": 1,
+                "click_and_collect_enabled": true
+            },
+            {
+                "store_id": "DEL-S02",
+                "store_name": "Jaypore \u2013 Dwarka Vegas Mall",
+                "stock_count": 2,
+                "click_and_collect_enabled": true
+            }
+        ],
+        "last_updated": "2025-12-10T13:50:47.860290Z"
+    },
+    "207": {
+        "product_sku": "207",
+        "online_stock": 6,
+        "store_locations": [
+            {
+                "store_id": "DEL-S03",
+                "store_name": "TASVA \u2013 South Extension I",
+                "stock_count": 1,
+                "click_and_collect_enabled": true
+            },
+            {
+                "store_id": "DEL-S04",
+                "store_name": "Pantaloons \u2013 Pacific Mall Tagore Garden",
+                "stock_count": 2,
+                "click_and_collect_enabled": true
+            }
+        ],
+        "last_updated": "2025-12-10T13:50:47.860290Z"
+    },
+    "208": {
+        "product_sku": "208",
+        "online_stock": 11,
+        "store_locations": [
+            {
+                "store_id": "DEL-S05",
+                "store_name": "Van Heusen \u2013 Connaught Place",
+                "stock_count": 3,
+                "click_and_collect_enabled": true
+            },
+            {
+                "store_id": "DEL-S01",
+                "store_name": "Forever 21 \u2013 DLF Saket",
+                "stock_count": 2,
+                "click_and_collect_enabled": true
+            }
+        ],
+        "last_updated": "2025-12-10T13:50:47.860290Z"
+    },
+    "301": {
+        "product_sku": "301",
+        "online_stock": 8,
+        "store_locations": [
+            {
+                "store_id": "DEL-B01",
+                "store_name": "Forever 21 \u2013 DLF Saket",
+                "stock_count": 2,
+                "click_and_collect_enabled": true
+            },
+            {
+                "store_id": "DEL-B02",
+                "store_name": "Jaypore \u2013 Dwarka Vegas Mall",
+                "stock_count": 1,
+                "click_and_collect_enabled": true
+            }
+        ],
+        "last_updated": "2025-12-10T13:50:47.860290Z"
+    },
+    "302": {
+        "product_sku": "302",
+        "online_stock": 15,
+        "store_locations": [
+            {
+                "store_id": "DEL-B03",
+                "store_name": "TASVA \u2013 South Extension I",
+                "stock_count": 3,
+                "click_and_collect_enabled": true
+            },
+            {
+                "store_id": "DEL-B04",
+                "store_name": "Pantaloons \u2013 Pacific Mall Tagore Garden",
+                "stock_count": 2,
+                "click_and_collect_enabled": true
+            }
+        ],
+        "last_updated": "2025-12-10T13:50:47.860290Z"
+    },
+    "303": {
+        "product_sku": "303",
+        "online_stock": 12,
+        "store_locations": [
+            {
+                "store_id": "DEL-B05",
+                "store_name": "Van Heusen \u2013 Connaught Place",
+                "stock_count": 1,
+                "click_and_collect_enabled": true
+            },
+            {
+                "store_id": "DEL-B01",
+                "store_name": "Forever 21 \u2013 DLF Saket",
+                "stock_count": 2,
+                "click_and_collect_enabled": true
+            }
+        ],
+        "last_updated": "2025-12-10T13:50:47.860290Z"
+    },
+    "304": {
+        "product_sku": "304",
+        "online_stock": 7,
+        "store_locations": [
+            {
+                "store_id": "DEL-B02",
+                "store_name": "Jaypore \u2013 Dwarka Vegas Mall",
+                "stock_count": 1,
+                "click_and_collect_enabled": true
+            },
+            {
+                "store_id": "DEL-B03",
+                "store_name": "TASVA \u2013 South Extension I",
+                "stock_count": 2,
+                "click_and_collect_enabled": true
+            }
+        ],
+        "last_updated": "2025-12-10T13:50:47.860290Z"
+    },
+    "305": {
+        "product_sku": "305",
+        "online_stock": 14,
+        "store_locations": [
+            {
+                "store_id": "DEL-B04",
+                "store_name": "Pantaloons \u2013 Pacific Mall Tagore Garden",
+                "stock_count": 3,
+                "click_and_collect_enabled": true
+            },
+            {
+                "store_id": "DEL-B05",
+                "store_name": "Van Heusen \u2013 Connaught Place",
+                "stock_count": 2,
+                "click_and_collect_enabled": true
+            }
+        ],
+        "last_updated": "2025-12-10T13:50:47.860290Z"
+    },
+    "306": {
+        "product_sku": "306",
+        "online_stock": 10,
+        "store_locations": [
+            {
+                "store_id": "DEL-B01",
+                "store_name": "Forever 21 \u2013 DLF Saket",
+                "stock_count": 2,
+                "click_and_collect_enabled": true
+            },
+            {
+                "store_id": "DEL-B02",
+                "store_name": "Jaypore \u2013 Dwarka Vegas Mall",
+                "stock_count": 3,
+                "click_and_collect_enabled": true
+            }
+        ],
+        "last_updated": "2025-12-10T13:50:47.860290Z"
+    },
+    "307": {
+        "product_sku": "307",
+        "online_stock": 16,
+        "store_locations": [
+            {
+                "store_id": "DEL-B03",
+                "store_name": "TASVA \u2013 South Extension I",
+                "stock_count": 2,
+                "click_and_collect_enabled": true
+            },
+            {
+                "store_id": "DEL-B04",
+                "store_name": "Pantaloons \u2013 Pacific Mall Tagore Garden",
+                "stock_count": 3,
+                "click_and_collect_enabled": true
+            }
+        ],
+        "last_updated": "2025-12-10T13:50:47.860290Z"
+    },
+    "308": {
+        "product_sku": "308",
+        "online_stock": 9,
+        "store_locations": [
+            {
+                "store_id": "DEL-B05",
+                "store_name": "Van Heusen \u2013 Connaught Place",
+                "stock_count": 1,
+                "click_and_collect_enabled": true
+            },
+            {
+                "store_id": "DEL-B01",
+                "store_name": "Forever 21 \u2013 DLF Saket",
+                "stock_count": 2,
+                "click_and_collect_enabled": true
+            }
+        ],
+        "last_updated": "2025-12-10T13:50:47.860290Z"
+    },
+    "309": {
+        "product_sku": "309",
+        "online_stock": 11,
+        "store_locations": [
+            {
+                "store_id": "DEL-B02",
+                "store_name": "Jaypore \u2013 Dwarka Vegas Mall",
+                "stock_count": 2,
+                "click_and_collect_enabled": true
+            },
+            {
+                "store_id": "DEL-B03",
+                "store_name": "TASVA \u2013 South Extension I",
+                "stock_count": 1,
+                "click_and_collect_enabled": true
+            }
+        ],
+        "last_updated": "2025-12-10T13:50:47.860290Z"
+    },
+    "310": {
+        "product_sku": "310",
+        "online_stock": 13,
+        "store_locations": [
+            {
+                "store_id": "DEL-B04",
+                "store_name": "Pantaloons \u2013 Pacific Mall Tagore Garden",
+                "stock_count": 2,
+                "click_and_collect_enabled": true
+            },
+            {
+                "store_id": "DEL-B05",
+                "store_name": "Van Heusen \u2013 Connaught Place",
+                "stock_count": 3,
+                "click_and_collect_enabled": true
+            }
+        ],
+        "last_updated": "2025-12-10T13:50:47.860290Z"
+    }
+}

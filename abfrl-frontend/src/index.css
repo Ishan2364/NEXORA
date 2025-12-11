@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+/* --- 1. GLOBAL FIXES (Critical for Layout) --- */
+* {
+  box-sizing: border-box; /* Prevents padding from breaking layout */
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevents the whole browser window from scrolling */
+}
+
+@keyframes royalFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+:root {
+  /* --- ROYAL PALETTE --- */
+  --royal-gold: #d4af37;
+  --rose-gold: #e1adac;
+  --velvet-red: #880808;
+  --deep-black: #0a0a0a;
+  --rich-charcoal: #171717;
+  
+  /* Gradients */
+  --gold-gradient: linear-gradient(135deg, #d4af37 0%, #c5a028 100%);
+  --rose-gradient: linear-gradient(135deg, #e1adac 0%, #c48b8a 100%);
+  --royal-gradient: linear-gradient(135deg, #880808 0%, #5e0202 100%);
+  
+  /* Backgrounds */
+  --bg-app: #050505;
+  --glass-panel: rgba(23, 23, 23, 0.7);
+  --glass-border: rgba(212, 175, 55, 0.2); /* Subtle gold border */
+  
+  /* Text */
+  --text-primary: #fffaf0; /* Cream */
+  --text-secondary: #a3a3a3;
+  --text-gold: #d4af37;
+  
+  /* Shadows */
+  --glow-gold: 0 0 20px rgba(212, 175, 55, 0.15);
+  --shadow-deep: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: var(--bg-app);
+  /* Luxury dark gradient background */
+  background-image: 
+    radial-gradient(circle at 0% 0%, rgba(136, 8, 8, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 100% 100%, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
+  background-attachment: fixed;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif; /* Serif font for headings */
+}
+
+/* --- ANIMATIONS --- */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-enter {
+  animation: fadeInUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+/* --- LOGIN PAGE --- */
+.login-bg {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* A blend of Deep Royal Red, Luxurious Purple, and a hint of Gold */
+  background: linear-gradient(-45deg, #2b0505, #1a0b2e, #000000, #3d2b00);
+  background-size: 400% 400%;
+  
+  /* Slow, elegant movement */
+  animation: royalFlow 15s ease infinite;
+}
+
+.royal-card {
+  background: rgba(20, 20, 20, 0.85);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 24px;
+  box-shadow: var(--shadow-deep), var(--glow-gold);
+  padding: 3rem;
+  width: 90%;
+  max-width: 420px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Golden line at top */
+.royal-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: var(--gold-gradient);
+}
+
+/* --- SIDEBAR --- */
+.sidebar {
+  width: 280px;
+  height: 100vh; /* Fixed height */
+  background: var(--deep-black);
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1.5rem;
+  flex-shrink: 0; /* Ensures sidebar doesn't squash */
+  z-index: 10;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  margin-bottom: 8px;
+  border-radius: 12px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.nav-item:hover {
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-primary);
+  transform: translateX(4px);
+}
+
+.nav-item.active {
+  background: linear-gradient(90deg, rgba(136, 8, 8, 0.2) 0%, transparent 100%);
+  color: var(--rose-gold);
+  border-left: 3px solid var(--rose-gold);
+}
+
+/* --- NEW: DISABLED BUTTON STATE --- */
+.nav-item.disabled {
+  opacity: 0.3; /* Makes it dim */
+  pointer-events: none; /* Makes it unclickable */
+  filter: grayscale(100%); /* Removes color */
+  cursor: not-allowed;
+}
+
+/* --- CHAT AREA --- */
+.chat-layout {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: transparent;
+  overflow: hidden; /* Ensures scroll is handled inside children */
+}
+
+.messages-container {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto; /* Enables scrolling for chat */
+  display: flex;
+  flex-direction: column;
+}
+
+.msg-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 2rem;
+  width: 100%;
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.msg-row.user { flex-direction: row-reverse; }
+
+.bubble {
+  padding: 18px 26px;
+  border-radius: 24px;
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 80%;
+  position: relative;
+  letter-spacing: 0.01em;
+}
+
+.bubble.bot {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text-primary);
+  border-bottom-left-radius: 4px;
+}
+
+.bubble.user {
+  background: var(--royal-gradient);
+  color: white;
+  border-bottom-right-radius: 4px;
+  box-shadow: 0 4px 15px rgba(136, 8, 8, 0.4);
+}
+
+/* --- INPUT BAR --- */
+.input-zone {
+  padding: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(to top, #050505 0%, transparent 100%);
+  flex-shrink: 0; /* Keeps input at bottom */
+}
+
+.input-bar {
+  background: rgba(30, 30, 30, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  padding: 8px 8px 8px 24px;
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.input-bar:focus-within {
+  border-color: var(--rose-gold);
+  box-shadow: 0 0 0 1px var(--rose-gold), 0 10px 25px rgba(0,0,0,0.3);
+  transform: translateY(-2px);
+}
+
+.input-field {
+  flex: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 1rem;
+  color: white;
+}
+
+.send-fab {
+  width: 48px;
+  height: 48px;
+  background: var(--gold-gradient);
+  color: #3f2e00; /* Dark gold text */
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
+
+.send-fab:hover { transform: scale(1.1); }
+
+/* --- NEW: DASHBOARD SCROLL CONTAINER --- */
+/* This fixes the issue where dashboard content was cut off */
+.dashboard-container {
+  padding: 3rem;
+  overflow-y: auto; /* Enables vertical scrolling */
+  height: 100%;     /* Takes up remaining screen height */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 100px; /* Extra padding at bottom so last card isn't covered */
+}
+
+/* --- PROFILE DASHBOARD --- */
+.profile-hero {
+  background: linear-gradient(135deg, #1c0505 0%, #380808 100%);
+  border: 1px solid rgba(136, 8, 8, 0.3);
+  border-radius: 24px;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+/* Shine effect on card */
+.profile-hero::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(45deg, transparent 45%, rgba(255,255,255,0.05) 50%, transparent 55%);
+  animation: shimmer 6s infinite;
+  background-size: 200% 200%;
+}
+
+.avatar-large {
+  width: 110px; height: 110px;
+  background: var(--gold-gradient);
+  color: #3f2e00;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 3rem;
+  font-family: 'Playfair Display', serif;
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+.history-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.history-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+.history-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(212, 175, 55, 0.3);
+  transform: translateY(-5px);
+}
+
+/* Badges */
+.status-badge {
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.status-badge.gold { 
+  background: rgba(212, 175, 55, 0.15); 
+  color: #ffd700; 
+  border: 1px solid rgba(212, 175, 55, 0.3); 
+}
+.status-badge.platinum { 
+  background: rgba(226, 232, 240, 0.15); 
+  color: #e2e8f0; 
+  border: 1px solid rgba(226, 232, 240, 0.3); 
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }

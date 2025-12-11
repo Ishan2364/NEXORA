@@ -1,0 +1,39 @@
+{
+    "LOYALTY_TIER_RATES": {
+        "Bronze": 0.0,
+        "Silver": 0.05,
+        "Gold": 0.1,
+        "Diamond": 0.15
+    },
+    "COUPONS": {
+        "FOOTWEAR20": {
+            "type": "percentage",
+            "value": 0.2,
+            "applies_to": {
+                "category": "Footwear"
+            },
+            "description": "20% Off Footwear"
+        }
+    },
+    "SPECIAL_PROMOTIONS": {
+        "BIRTHDAY": {
+            "type": "flat",
+            "value": 500.0,
+            "description": "Birthday Special Flat \u20b9500 Off!"
+        }
+    },
+    "THRESHOLD_PROMOTIONS": [
+        {
+            "threshold": 1000.0,
+            "type": "flat_discount",
+            "value": 200.0,
+            "description": "Flat \u20b9200 Off on Orders Above \u20b91000"
+        },
+        {
+            "threshold": 3000.0,
+            "type": "flat_discount",
+            "value": 500.0,
+            "description": "Flat \u20b9500 Off on Orders Above \u20b93000"
+        }
+    ]
+}

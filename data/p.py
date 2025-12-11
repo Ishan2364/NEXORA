@@ -1,0 +1,57 @@
+import json
+import os
+
+# Define the path (ensure this matches your project structure)
+# If you are running this from the root 'abfrl_retail_agent' folder:
+file_path = os.path.join("data", "products.json")
+
+products_data = [
+    # --- SERIES 1-10: CASUAL & FORMAL APPAREL ---
+    { "sku": "1", "name": "High-Rise Mom Jeans", "category": "Jeans", "price": 2399, "description": "Vintage wash denim, comfortable fit." },
+    { "sku": "2", "name": "Navy Blue Polo Shirt", "category": "T-Shirts", "price": 1499, "description": "Smart casual fit, breathable fabric." },
+    { "sku": "3", "name": "Graphic Print Urban Tee", "category": "T-Shirts", "price": 1299, "description": "Trendy streetwear style." },
+    { "sku": "4", "name": "Slim Fit Chinos", "category": "Trousers", "price": 1999, "description": "Beige formal trousers, stretchable." },
+    { "sku": "5", "name": "Black V-Neck Tee", "category": "T-Shirts", "price": 899, "description": "Soft cotton, perfect for layering." },
+    { "sku": "6", "name": "Cotton Ribbed Top", "category": "Tops", "price": 799, "description": "Essential basic for everyday wear." },
+    { "sku": "7", "name": "A-Line Dress", "category": "Dresses", "price": 2799, "description": "Flowy silhouette, floral pattern." },
+    { "sku": "8", "name": "Classic Navy Formal Shirt", "category": "Shirts", "price": 1799, "description": "Crisp cotton, office wear essential." },
+    { "sku": "9", "name": "Active Track Pants", "category": "Activewear", "price": 1299, "description": "Moisture-wicking fabric for workouts." },
+    { "sku": "10", "name": "Tailored Fit White Shirt", "category": "Shirts", "price": 1999, "description": "Premium cotton, wrinkle-free finish." },
+
+    # --- SERIES 101-105: DRESSES & ETHNIC ---
+    { "sku": "101", "name": "Floral Summer Midi Dress", "category": "Dresses", "price": 2999, "description": "Light and breezy, perfect for brunch." },
+    { "sku": "102", "name": "Red Party Midi Dress", "category": "Dresses", "price": 3599, "description": "Elegant evening wear with satin finish." },
+    { "sku": "103", "name": "Printed Cotton Kurti", "category": "Ethnicwear", "price": 1299, "description": "Traditional print, breathable cotton." },
+    { "sku": "104", "name": "Wide-Leg Palazzo Pants", "category": "Ethnicwear", "price": 899, "description": "Comfortable fit, pairs with kurtis." },
+    { "sku": "105", "name": "Black Satin Slip Dress", "category": "Dresses", "price": 2599, "description": "Chic and minimal evening wear." },
+
+    # --- SERIES 201-208: FOOTWEAR ---
+    { "sku": "201", "name": "Classic White Sneakers", "category": "Footwear", "price": 2999, "description": "Everyday comfort, durable sole." },
+    { "sku": "202", "name": "Premium Leather Heels", "category": "Footwear", "price": 4999, "description": "Elegant stiletto heels for parties." },
+    { "sku": "203", "name": "Red Stiletto High Heels", "category": "Footwear", "price": 2499, "description": "Bold statement heels." },
+    { "sku": "204", "name": "Black Patent Leather Heels", "category": "Footwear", "price": 2299, "description": "Glossy finish, formal wear." },
+    { "sku": "205", "name": "Burgundy Block Heels", "category": "Footwear", "price": 2099, "description": "Comfortable block heel design." },
+    { "sku": "206", "name": "Short Ankle Boots", "category": "Footwear", "price": 2399, "description": "Burgundy suede, winter essential." },
+    { "sku": "207", "name": "Knee-High Black Boots", "category": "Footwear", "price": 2999, "description": "Suede finish, stylish and warm." },
+    { "sku": "208", "name": "White Strappy Heels", "category": "Footwear", "price": 2199, "description": "Minimalist design, summer ready." },
+
+    # --- SERIES 301-310: ACCESSORIES & OTHERS ---
+    { "sku": "301", "name": "Canvas Tote Bag", "category": "Accessories", "price": 1899, "description": "Spacious and durable everyday bag." },
+    { "sku": "302", "name": "Genuine Leather Belt", "category": "Accessories", "price": 1499, "description": "Classic buckle, brown leather." },
+    { "sku": "303", "name": "Steel Strap Watch", "category": "Accessories", "price": 3499, "description": "Water-resistant, modern dial." },
+    { "sku": "304", "name": "Luxury Leather Handbag", "category": "Accessories", "price": 5599, "description": "Premium finish, multiple compartments." },
+    { "sku": "305", "name": "Matte Lip Crayon", "category": "Beauty", "price": 599, "description": "Long-lasting color." },
+    { "sku": "306", "name": "Cotton Trunks (Pack of 2)", "category": "Innerwear", "price": 998, "description": "Soft stretch cotton." },
+    { "sku": "307", "name": "Quilted Bomber Jacket", "category": "Apparel", "price": 2499, "description": "Warm winter jacket, zip closure." },
+    { "sku": "308", "name": "Sheer Mesh Panel Dress", "category": "Dresses", "price": 2899, "description": "Edgy party wear style." },
+    { "sku": "309", "name": "Halter Neck Mini Dress", "category": "Dresses", "price": 2499, "description": "Ruched detail, flattering fit." },
+    { "sku": "310", "name": "Off-Shoulder Velvet Dress", "category": "Dresses", "price": 2799, "description": "Luxurious velvet fabric." }
+]
+
+# Write to file
+try:
+    with open(file_path, "w") as f:
+        json.dump(products_data, f, indent=4)
+    print(f"✅ Successfully updated {file_path} with {len(products_data)} products.")
+except Exception as e:
+    print(f"❌ Error writing file: {e}")

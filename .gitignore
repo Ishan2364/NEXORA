@@ -1,0 +1,15 @@
+# --- Python Safety ---
+__pycache__/
+*.pyc
+venv/
+.venv/
+.pytest_cache/
+
+# --- Node/React Safety ---
+node_modules/
+build/
+dist/
+.DS_Store
+
+# --- SECURITY (NEVER UPLOAD THIS) ---
+.env

@@ -1,0 +1,629 @@
+{
+  "customers": [
+    {
+      "customer_id": "CUST001",
+      "name": "Riya Shah",
+      "age": 27,
+      "gender": "Female",
+      "city": "Mumbai",
+      "loyalty_tier": "Gold",
+      "device_preference": "iOS",
+      "purchase_history": [
+        {
+          "date": "2025-11-12",
+          "category": "Women Westernwear",
+          "product": "High-Rise Mom Jeans",
+          "sku_type": "Apparel",
+          "quantity": 1,
+          "price": 2399,
+          "channel": "App",
+          "payment_method": "UPI",
+          "returned": false
+        },
+        {
+          "date": "2025-10-03",
+          "category": "Footwear",
+          "product": "White Sneakers",
+          "sku_type": "Footwear",
+          "quantity": 1,
+          "price": 2999,
+          "channel": "App",
+          "payment_method": "UPI",
+          "returned": false
+        },
+        {
+          "date": "2025-09-14",
+          "category": "Tops",
+          "product": "Cotton Ribbed Top",
+          "sku_type": "Apparel",
+          "quantity": 2,
+          "price": 1598,
+          "channel": "Web",
+          "payment_method": "Credit Card",
+          "returned": false
+        },
+        {
+          "date": "2025-07-25",
+          "category": "Accessories",
+          "product": "Tote Bag",
+          "sku_type": "Bags",
+          "quantity": 1,
+          "price": 1899,
+          "channel": "App",
+          "payment_method": "UPI",
+          "returned": false
+        },
+        {
+          "date": "2025-06-09",
+          "category": "Westernwear",
+          "product": "A-Line Dress",
+          "sku_type": "Apparel",
+          "quantity": 1,
+          "price": 2799,
+          "channel": "App",
+          "payment_method": "UPI",
+          "returned": true
+        }
+      ]
+    },
+    {
+      "customer_id": "CUST002",
+      "name": "Arjun Verma",
+      "age": 33,
+      "gender": "Male",
+      "city": "Bengaluru",
+      "loyalty_tier": "Platinum",
+      "device_preference": "Android",
+      "purchase_history": [
+        {
+          "date": "2025-10-29",
+          "category": "Men Casualwear",
+          "product": "Slim Fit Tees",
+          "sku_type": "Apparel",
+          "quantity": 3,
+          "price": 1197,
+          "channel": "App",
+          "payment_method": "Credit Card",
+          "returned": false
+        },
+        {
+          "date": "2025-09-11",
+          "category": "Innerwear",
+          "product": "Cotton Trunks Pack",
+          "sku_type": "Apparel",
+          "quantity": 2,
+          "price": 998,
+          "channel": "App",
+          "payment_method": "Wallet",
+          "returned": false
+        },
+        {
+          "date": "2025-08-28",
+          "category": "Men Formalwear",
+          "product": "Navy Shirt",
+          "sku_type": "Apparel",
+          "quantity": 1,
+          "price": 1799,
+          "channel": "Web",
+          "payment_method": "Credit Card",
+          "returned": false
+        },
+        {
+          "date": "2025-07-03",
+          "category": "Accessories",
+          "product": "Leather Belt",
+          "sku_type": "Accessories",
+          "quantity": 1,
+          "price": 1499,
+          "channel": "Store",
+          "payment_method": "Card",
+          "returned": false
+        },
+        {
+          "date": "2025-04-19",
+          "category": "Activewear",
+          "product": "Track Pants",
+          "sku_type": "Apparel",
+          "quantity": 1,
+          "price": 1299,
+          "channel": "App",
+          "payment_method": "UPI",
+          "returned": true
+        }
+      ]
+    },
+    {
+      "customer_id": "CUST003",
+      "name": "Sneha Iyer",
+      "age": 22,
+      "gender": "Female",
+      "city": "Chennai",
+      "loyalty_tier": "Silver",
+      "device_preference": "Android",
+      "purchase_history": [
+        {
+          "date": "2025-11-18",
+          "category": "Ethnicwear",
+          "product": "Printed Kurti",
+          "sku_type": "Apparel",
+          "quantity": 1,
+          "price": 1299,
+          "channel": "App",
+          "payment_method": "UPI",
+          "returned": false
+        },
+        {
+          "date": "2025-10-07",
+          "category": "Cosmetics",
+          "product": "Lip Crayon",
+          "sku_type": "Beauty",
+          "quantity": 2,
+          "price": 1198,
+          "channel": "App",
+          "payment_method": "COD",
+          "returned": false
+        },
+        {
+          "date": "2025-08-14",
+          "category": "Ethnicwear",
+          "product": "Palazzo Pants",
+          "sku_type": "Apparel",
+          "quantity": 1,
+          "price": 899,
+          "channel": "App",
+          "payment_method": "UPI",
+          "returned": true
+        },
+        {
+          "date": "2025-06-29",
+          "category": "Footwear",
+          "product": "Flats Sandals",
+          "sku_type": "Footwear",
+          "quantity": 1,
+          "price": 799,
+          "channel": "Web",
+          "payment_method": "Credit Card",
+          "returned": false
+        }
+      ]
+    },
+    {
+      "customer_id": "CUST004",
+      "name": "Kabir Malhotra",
+      "age": 29,
+      "gender": "Male",
+      "city": "Delhi NCR",
+      "loyalty_tier": "Gold",
+      "device_preference": "Web",
+      "purchase_history": [
+        {
+          "date": "2025-10-10",
+          "category": "Formalwear",
+          "product": "Tailored Fit Shirt",
+          "sku_type": "Apparel",
+          "quantity": 1,
+          "price": 1999,
+          "channel": "Web",
+          "payment_method": "Credit Card",
+          "returned": false
+        },
+        {
+          "date": "2025-08-21",
+          "category": "Accessories",
+          "product": "Steel Strap Watch",
+          "sku_type": "Accessories",
+          "quantity": 1,
+          "price": 3499,
+          "channel": "Store",
+          "payment_method": "Card",
+          "returned": false
+        },
+        {
+          "date": "2025-07-13",
+          "category": "Footwear",
+          "product": "Formal Shoes",
+          "sku_type": "Footwear",
+          "quantity": 1,
+          "price": 2999,
+          "channel": "App",
+          "payment_method": "UPI",
+          "returned": false
+        }
+      ]
+    },
+    {
+      "customer_id": "CUST005",
+      "name": "Ayesha Khan",
+      "age": 31,
+      "gender": "Female",
+      "city": "Hyderabad",
+      "loyalty_tier": "Diamond",
+      "device_preference": "iOS",
+      "purchase_history": [
+        {
+          "date": "2025-11-01",
+          "category": "Luxury Apparel",
+          "product": "Designer Maxi Dress",
+          "sku_type": "Apparel",
+          "quantity": 1,
+          "price": 8999,
+          "channel": "App",
+          "payment_method": "UPI",
+          "returned": false
+        },
+        {
+          "date": "2025-09-19",
+          "category": "Footwear",
+          "product": "Premium Heels",
+          "sku_type": "Footwear",
+          "quantity": 1,
+          "price": 4999,
+          "channel": "Web",
+          "payment_method": "Credit Card",
+          "returned": false
+        },
+        {
+          "date": "2025-08-04",
+          "category": "Accessories",
+          "product": "Leather Handbag",
+          "sku_type": "Bags",
+          "quantity": 1,
+          "price": 5599,
+          "channel": "App",
+          "payment_method": "UPI",
+          "returned": true
+        }
+      ]
+    },
+    {
+      "customer_id": "CUST006",
+      "name": "Riya Mehra",
+      "age": 28,
+      "gender": "Female",
+      "city": "Mumbai",
+      "loyalty_tier": "Gold",
+      "device_preference": "Android",
+      "purchase_history": [
+        {
+          "date": "2025-11-02",
+          "category": "Clothing",
+          "product": "Black Satin Slip Dress",
+          "sku_type": "Apparel",
+          "quantity": 1,
+          "price": 2599,
+          "channel": "App",
+          "payment_method": "Credit Card",
+          "returned": false
+        },
+        {
+          "date": "2025-10-15",
+          "category": "Footwear",
+          "product": "White Leather Classic Pumps",
+          "sku_type": "Footwear",
+          "quantity": 1,
+          "price": 2199,
+          "channel": "Web",
+          "payment_method": "UPI",
+          "returned": false
+        }
+      ]
+    },
+    {
+      "customer_id": "CUST007",
+      "name": "Sana Iqbal",
+      "age": 33,
+      "gender": "Female",
+      "city": "Delhi",
+      "loyalty_tier": "Silver",
+      "device_preference": "iOS",
+      "purchase_history": [
+        {
+          "date": "2025-10-20",
+          "category": "Clothing",
+          "product": "Quilted Bomber Jacket",
+          "sku_type": "Apparel",
+          "quantity": 1,
+          "price": 2499,
+          "channel": "Web",
+          "payment_method": "Debit Card",
+          "returned": false
+        },
+        {
+          "date": "2025-09-28",
+          "category": "Footwear",
+          "product": "Red Stiletto High Heels",
+          "sku_type": "Footwear",
+          "quantity": 1,
+          "price": 2499,
+          "channel": "App",
+          "payment_method": "UPI",
+          "returned": false
+        }
+      ]
+    },
+    {
+      "customer_id": "CUST008",
+      "name": "Anika Sharma",
+      "age": 24,
+      "gender": "Female",
+      "city": "Bangalore",
+      "loyalty_tier": "Platinum",
+      "device_preference": "Android",
+      "purchase_history": [
+        {
+          "date": "2025-11-05",
+          "category": "Clothing",
+          "product": "Backless Bodycon Midi Dress",
+          "sku_type": "Apparel",
+          "quantity": 1,
+          "price": 2999,
+          "channel": "App",
+          "payment_method": "Credit Card",
+          "returned": false
+        },
+        {
+          "date": "2025-10-12",
+          "category": "Footwear",
+          "product": "Black Patent Leather Heels",
+          "sku_type": "Footwear",
+          "quantity": 1,
+          "price": 2299,
+          "channel": "Web",
+          "payment_method": "UPI",
+          "returned": false
+        }
+      ]
+    },
+    {
+      "customer_id": "CUST009",
+      "name": "Tanya Verma",
+      "age": 29,
+      "gender": "Female",
+      "city": "Chennai",
+      "loyalty_tier": "Gold",
+      "device_preference": "iOS",
+      "purchase_history": [
+        {
+          "date": "2025-10-30",
+          "category": "Clothing",
+          "product": "Halter Neck Ruched Mini Dress",
+          "sku_type": "Apparel",
+          "quantity": 1,
+          "price": 2499,
+          "channel": "Web",
+          "payment_method": "Debit Card",
+          "returned": false
+        },
+        {
+          "date": "2025-09-22",
+          "category": "Footwear",
+          "product": "Burgundy Red Block Heels",
+          "sku_type": "Footwear",
+          "quantity": 1,
+          "price": 2099,
+          "channel": "App",
+          "payment_method": "UPI",
+          "returned": false
+        }
+      ]
+    },
+    {
+      "customer_id": "CUST010",
+      "name": "Meera Joshi",
+      "age": 32,
+      "gender": "Female",
+      "city": "Pune",
+      "loyalty_tier": "Diamond",
+      "device_preference": "Android",
+      "purchase_history": [
+        {
+          "date": "2025-11-03",
+          "category": "Clothing",
+          "product": "Sheer Mesh Panel Midi Dress",
+          "sku_type": "Apparel",
+          "quantity": 1,
+          "price": 2899,
+          "channel": "App",
+          "payment_method": "Credit Card",
+          "returned": false
+        },
+        {
+          "date": "2025-10-18",
+          "category": "Footwear",
+          "product": "Short Ankle Boots \u00e2\u20ac\u201c Burgundy Suede",
+          "sku_type": "Footwear",
+          "quantity": 1,
+          "price": 2499,
+          "channel": "Web",
+          "payment_method": "UPI",
+          "returned": false
+        }
+      ]
+    },
+    {
+      "customer_id": "CUST011",
+      "name": "Isha Reddy",
+      "age": 27,
+      "gender": "Female",
+      "city": "Kolkata",
+      "loyalty_tier": "Silver",
+      "device_preference": "iOS",
+      "purchase_history": [
+        {
+          "date": "2025-11-06",
+          "category": "Clothing",
+          "product": "Extreme Plunge Bodycon Mini Dress",
+          "sku_type": "Apparel",
+          "quantity": 1,
+          "price": 2999,
+          "channel": "Web",
+          "payment_method": "Debit Card",
+          "returned": false
+        },
+        {
+          "date": "2025-10-20",
+          "category": "Footwear",
+          "product": "Ankle-Length Short Boots \u00e2\u20ac\u201c Black Leather",
+          "sku_type": "Footwear",
+          "quantity": 1,
+          "price": 2399,
+          "channel": "App",
+          "payment_method": "UPI",
+          "returned": false
+        }
+      ]
+    },
+    {
+      "customer_id": "CUST012",
+      "name": "Naina Kapoor",
+      "age": 30,
+      "gender": "Female",
+      "city": "Ahmedabad",
+      "loyalty_tier": "Gold",
+      "device_preference": "Android",
+      "purchase_history": [
+        {
+          "date": "2025-10-25",
+          "category": "Clothing",
+          "product": "Backless Lace-Up Mini Dress",
+          "sku_type": "Apparel",
+          "quantity": 1,
+          "price": 2799,
+          "channel": "Web",
+          "payment_method": "Credit Card",
+          "returned": false
+        },
+        {
+          "date": "2025-10-10",
+          "category": "Footwear",
+          "product": "Knee-High Black Suede Boots",
+          "sku_type": "Footwear",
+          "quantity": 1,
+          "price": 2999,
+          "channel": "App",
+          "payment_method": "UPI",
+          "returned": false
+        }
+      ]
+    },
+    {
+      "customer_id": "CUST013",
+      "name": "Anjali Bhatia",
+      "age": 26,
+      "gender": "Female",
+      "city": "Jaipur",
+      "loyalty_tier": "Platinum",
+      "device_preference": "iOS",
+      "purchase_history": [
+        {
+          "date": "2025-11-04",
+          "category": "Clothing",
+          "product": "High-Slit Asymmetric Bodycon Dress",
+          "sku_type": "Apparel",
+          "quantity": 1,
+          "price": 3099,
+          "channel": "Web",
+          "payment_method": "Debit Card",
+          "returned": false
+        },
+        {
+          "date": "2025-10-15",
+          "category": "Footwear",
+          "product": "White Strappy Heels",
+          "sku_type": "Footwear",
+          "quantity": 1,
+          "price": 2199,
+          "channel": "App",
+          "payment_method": "UPI",
+          "returned": false
+        }
+      ]
+    },
+    {
+      "customer_id": "CUST014",
+      "name": "Kritika Singh",
+      "age": 34,
+      "gender": "Female",
+      "city": "Lucknow",
+      "loyalty_tier": "Gold",
+      "device_preference": "Android",
+      "purchase_history": [
+        {
+          "date": "2025-11-07",
+          "category": "Clothing",
+          "product": "Strappy Cut-Out Mini Dress",
+          "sku_type": "Apparel",
+          "quantity": 1,
+          "price": 2999,
+          "channel": "Web",
+          "payment_method": "Credit Card",
+          "returned": false
+        },
+        {
+          "date": "2025-10-21",
+          "category": "Footwear",
+          "product": "Burgundy Red Block Heels",
+          "sku_type": "Footwear",
+          "quantity": 1,
+          "price": 2099,
+          "channel": "App",
+          "payment_method": "UPI",
+          "returned": false
+        }
+      ]
+    },
+    {
+      "customer_id": "CUST015",
+      "name": "Pooja Desai",
+      "age": 25,
+      "gender": "Female",
+      "city": "Indore",
+      "loyalty_tier": "Diamond",
+      "device_preference": "iOS",
+      "purchase_history": [
+        {
+          "date": "2025-11-08",
+          "category": "Clothing",
+          "product": "Off-Shoulder Velvet Mini Dress",
+          "sku_type": "Apparel",
+          "quantity": 1,
+          "price": 2799,
+          "channel": "Web",
+          "payment_method": "Credit Card",
+          "returned": false
+        },
+        {
+          "date": "2025-10-18",
+          "category": "Footwear",
+          "product": "Black Patent Leather Heels",
+          "sku_type": "Footwear",
+          "quantity": 1,
+          "price": 2299,
+          "channel": "App",
+          "payment_method": "UPI",
+          "returned": false
+        }
+      ]
+    },
+    {
+      "customer_id": "CUST020",
+      "name": "Ishan Srivastava",
+      "age": 21,
+      "gender": "Male",
+      "city": "Varanasi",
+      "loyalty_tier": "Silver",
+      "device_preference": "Web",
+      "purchase_history": []
+    },
+    {
+      "customer_id": "CUST0025",
+      "name": "Apoorv",
+      "age": 23,
+      "gender": "Male",
+      "city": "VNS",
+      "loyalty_tier": "Silver",
+      "device_preference": "Web",
+      "purchase_history": []
+    }
+  ]
+}
