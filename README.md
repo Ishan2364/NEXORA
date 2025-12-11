@@ -55,11 +55,13 @@ The interface is aware of the AI's intent. It renders specialized components dyn
 - A [Groq API Key](https://console.groq.com)
 
 ### 1. Clone the Repository
-```bash
+Bash
 git clone [https://github.com/YOUR_USERNAME/nexora-retail-agent.git](https://github.com/YOUR_USERNAME/nexora-retail-agent.git)
-cd nexora-retail-agent 
+cd nexora-retail-agent
+
+
 ### 2. Backend Setup
-```bash
+Bash
 # Create and activate virtual environment
 python -m venv venv
 
@@ -75,3 +77,58 @@ pip install -r requirements.txt
 # Setup Environment Variables
 # Create a .env file in the root and add your key:
 echo "GROQ_API_KEY=gsk_your_key_here" > .env
+
+###3. Frontend Setup
+Bash
+
+# Open a new terminal in the project root
+npm install
+
+🏃‍♂️ Running the Application
+You need to run the Backend and Frontend simultaneously in two separate terminals.
+
+Terminal 1: Backend
+
+Bash
+
+uvicorn src.api:app --reload
+Server will start at: http://127.0.0.1:8000
+
+Terminal 2: Frontend
+
+Bash
+
+npm run dev
+App will start at: http://localhost:5173
+
+🧪 Demo Flow to Try
+Login: Use ID CUST001 (Password: any).
+
+Browse: Ask "Show me some red dresses."
+
+Buy: Say "I want to buy the first one."
+
+Loyalty: The agent will calculate your discount based on your tier.
+
+Pay: Choose UPI. Scan the QR code (or type "Done").
+
+Invoice: The agent will generate a digital receipt.
+
+Dashboard: Go to the Invoices tab to see your new permanent record.
+
+📂 Project Structure
+nexora-retail-agent/
+├── src/
+│   ├── agents/          # Worker definitions & Prompts
+│   ├── graph/           # LangGraph Workflow & State
+│   ├── tools/           # Python Tools (CRM, Inventory, Invoice)
+│   ├── api.py           # FastAPI Entry Point
+│   ├── App.jsx          # Main React UI
+│   └── index.css        # Royal Theme Styles
+├── data/                # JSON Mock Databases (Products, Users)
+├── requirements.txt     # Python Dependencies
+└── README.md            # Documentation
+🛡️ License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+<p align="center"> Built with ❤️ by <b>Rocky</b> | Powered by <b>Groq & LangGraph</b> </p>
