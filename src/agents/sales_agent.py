@@ -21,7 +21,7 @@ from src.tools.catalog_tools import search_catalog
 
 # --- 3. INITIALIZE GROQ ---
 llm = ChatGroq(
-    model="llama-3.1-8b-instant",  # Powerful and free model
+    model="openai/gpt-oss-120b",  # Powerful and free model
     temperature=0.3,
     api_key=GROQ_API_KEY      # Explicitly pass the key
 )

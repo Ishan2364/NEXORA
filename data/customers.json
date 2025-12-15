@@ -10,6 +10,69 @@
       "device_preference": "iOS",
       "purchase_history": [
         {
+          "date": "2025-12-15",
+          "category": "Apparel",
+          "product": "Navy Blue Polo Shirt x1",
+          "sku_type": "Apparel",
+          "quantity": 1,
+          "price": 1800.0,
+          "channel": "Web",
+          "payment_method": "Online",
+          "returned": false
+        },
+        {
+          "date": "2025-12-15",
+          "category": "Apparel",
+          "product": "1x Test Python Script Item",
+          "sku_type": "Apparel",
+          "quantity": 1,
+          "price": 9999.0,
+          "channel": "Web",
+          "payment_method": "Online",
+          "returned": false
+        },
+        {
+          "date": "2025-12-14",
+          "category": "Apparel",
+          "product": "1x Wide Leg Palazzo Pants",
+          "sku_type": "Apparel",
+          "quantity": 1,
+          "price": 1800.0,
+          "channel": "Web",
+          "payment_method": "Online",
+          "returned": false
+        },
+        {
+          "date": "2025-12-13",
+          "category": "Apparel",
+          "product": "Quilted Bomber Jacket x1",
+          "sku_type": "Apparel",
+          "quantity": 1,
+          "price": 1800.0,
+          "channel": "Web",
+          "payment_method": "Online",
+          "returned": false
+        },
+        {
+          "date": "2025-12-13",
+          "category": "Apparel",
+          "product": "1x Navy Blue Polo Shirt",
+          "sku_type": "Apparel",
+          "quantity": 1,
+          "price": 1800.0,
+          "channel": "Web",
+          "payment_method": "Online",
+          "returned": false
+        },
+        {
+          "date": "2025-12-12",
+          "category": "Apparel",
+          "product": "1x T-shirt",
+          "price": 1800.0,
+          "payment_method": "Online",
+          "returned": false
+        },
+        {
           "date": "2025-11-12",
           "category": "Women Westernwear",
           "product": "High-Rise Mom Jeans",
@@ -240,6 +303,17 @@
       "loyalty_tier": "Diamond",
       "device_preference": "iOS",
       "purchase_history": [
+        {
+          "date": "2025-12-16",
+          "category": "Apparel",
+          "product": "Footwear (SKU 204) x1",
+          "sku_type": "Apparel",
+          "quantity": 1,
+          "price": 1800.0,
+          "channel": "Web",
+          "payment_method": "Online",
+          "returned": false
+        },
         {
           "date": "2025-11-01",
           "category": "Luxury Apparel",
@@ -613,7 +687,41 @@
       "city": "Varanasi",
       "loyalty_tier": "Silver",
       "device_preference": "Web",
-      "purchase_history": []
+      "purchase_history": [
+        {
+          "date": "2025-12-16",
+          "category": "Apparel",
+          "product": "Selected items",
+          "sku_type": "Apparel",
+          "quantity": 1,
+          "price": 1800.0,
+          "channel": "Web",
+          "payment_method": "Online",
+          "returned": false
+        },
+        {
+          "date": "2025-12-16",
+          "category": "Apparel",
+          "product": "[{\"product_sku\": \"2\", \"category\": \"T-Shirts\", \"quantity\": 1, \"price\": 1499.0}]",
+          "sku_type": "Apparel",
+          "quantity": 1,
+          "price": 1700.0,
+          "channel": "Web",
+          "payment_method": "Online",
+          "returned": false
+        },
+        {
+          "date": "2025-12-15",
+          "category": "Apparel",
+          "product": "1x Test Python Script Item",
+          "sku_type": "Apparel",
+          "quantity": 1,
+          "price": 9999.0,
+          "channel": "Web",
+          "payment_method": "Online",
+          "returned": false
+        }
+      ]
     },
     {
       "customer_id": "CUST0025",
@@ -623,7 +731,41 @@
       "city": "VNS",
       "loyalty_tier": "Silver",
       "device_preference": "Web",
-      "purchase_history": []
+      "purchase_history": [
+        {
+          "date": "2025-12-16",
+          "category": "Apparel",
+          "product": "1 x Apparel (SKU 307)",
+          "sku_type": "Apparel",
+          "quantity": 1,
+          "price": 1800.0,
+          "channel": "Web",
+          "payment_method": "Online",
+          "returned": false
+        }
+      ]
+    },
+    {
+      "customer_id": "CUST021",
+      "name": "Kanishk Pandey",
+      "age": 21,
+      "gender": "Male",
+      "city": "Jaipur",
+      "loyalty_tier": "Silver",
+      "device_preference": "Web",
+      "purchase_history": [
+        {
+          "date": "2025-12-16",
+          "category": "Apparel",
+          "product": "Footwear SKU 204 x1",
+          "sku_type": "Apparel",
+          "quantity": 1,
+          "price": 1800.0,
+          "channel": "Web",
+          "payment_method": "Online",
+          "returned": false
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,175 @@
+{
+  "invoices": [
+    {
+      "invoice_id": "INV-1765564937",
+      "order_id": "ORD12345",
+      "customer_id": "CUST001",
+      "date": "2025-12-13",
+      "amount": 1800.0,
+      "items": "1x Navy Blue Polo Shirt",
+      "status": "Paid"
+    },
+    {
+      "invoice_id": "INV-1765565236",
+      "order_id": "ORD12345",
+      "customer_id": "CUST001",
+      "date": "2025-12-13",
+      "amount": 1800.0,
+      "items": "Quilted Bomber Jacket x1",
+      "status": "Paid"
+    },
+    {
+      "invoice_id": "INV-1765568409",
+      "order_id": "ORD001",
+      "customer_id": "CUST020",
+      "date": "2025-12-13",
+      "amount": 1800.0,
+      "items": "Quilted Bomber Jacket x1",
+      "status": "Paid"
+    },
+    {
+      "invoice_id": "INV-1765650089",
+      "order_id": "ORD001",
+      "customer_id": "CUST123",
+      "date": "2025-12-13",
+      "amount": 699.0,
+      "items": "Black V-Neck Tee x1",
+      "status": "Paid"
+    },
+    {
+      "invoice_id": "INV-1765650371",
+      "order_id": "ORD123",
+      "customer_id": "CUST123",
+      "date": "2025-12-13",
+      "amount": 1800.0,
+      "items": "Active Track Pants x1",
+      "status": "Paid"
+    },
+    {
+      "invoice_id": "INV-1765650743",
+      "order_id": "ORD12345",
+      "customer_id": "CUST001",
+      "date": "2025-12-14",
+      "amount": 1800.0,
+      "items": "1x Wide Leg Palazzo Pants",
+      "status": "Paid"
+    },
+    {
+      "invoice_id": "INV-1765650888",
+      "order_id": "ORDER123",
+      "customer_id": "CUST123",
+      "date": "2025-12-14",
+      "amount": 1800.0,
+      "items": "Slim Fit Chinos x1",
+      "status": "Paid"
+    },
+    {
+      "invoice_id": "INV-1765651114",
+      "order_id": "00123",
+      "customer_id": "cust_001",
+      "date": "2025-12-14",
+      "amount": 1800.0,
+      "items": "Black V-Neck Tee x1",
+      "status": "Paid"
+    },
+    {
+      "invoice_id": "INV-1765653006",
+      "order_id": "ORDER789",
+      "customer_id": "CUST123",
+      "date": "2025-12-14",
+      "amount": 1800.0,
+      "items": "SKU 201 x1",
+      "status": "Paid"
+    },
+    {
+      "invoice_id": "INV-1765791437",
+      "order_id": "TEST-ORD-1765791437",
+      "customer_id": "CUST001",
+      "date": "2025-12-15",
+      "amount": 9999.0,
+      "items": "1x Test Python Script Item",
+      "status": "Paid"
+    },
+    {
+      "invoice_id": "INV-1765791494",
+      "order_id": "TEST-ORD-1765791494",
+      "customer_id": "CUST020",
+      "date": "2025-12-15",
+      "amount": 9999.0,
+      "items": "1x Test Python Script Item",
+      "status": "Paid"
+    },
+    {
+      "invoice_id": "INV-1765791745",
+      "order_id": "ORD12345",
+      "customer_id": "CUST001",
+      "date": "2025-12-15",
+      "amount": 1800.0,
+      "items": "Navy Blue Polo Shirt x1",
+      "status": "Paid"
+    },
+    {
+      "invoice_id": "INV-1765792366",
+      "order_id": "ORD001",
+      "customer_id": "CUST123",
+      "date": "2025-12-15",
+      "amount": 1800.0,
+      "items": "Premium Leather Heels x1",
+      "status": "Paid"
+    },
+    {
+      "invoice_id": "INV-1765792561",
+      "order_id": "ORD12345",
+      "customer_id": "Ishan",
+      "date": "2025-12-15",
+      "amount": 1800.0,
+      "items": "Leather Heels x1",
+      "status": "Paid"
+    },
+    {
+      "invoice_id": "INV-1765823760",
+      "order_id": "ORD020",
+      "customer_id": "CUST020",
+      "date": "2025-12-16",
+      "amount": 1700.0,
+      "items": "[{\"product_sku\": \"2\", \"category\": \"T-Shirts\", \"quantity\": 1, \"price\": 1499.0}]",
+      "status": "Paid"
+    },
+    {
+      "invoice_id": "INV-1765824198",
+      "order_id": "ORD12345",
+      "customer_id": "CUST020",
+      "date": "2025-12-16",
+      "amount": 1800.0,
+      "items": "Selected items",
+      "status": "Paid"
+    },
+    {
+      "invoice_id": "INV-1765824476",
+      "order_id": "ORD0025",
+      "customer_id": "CUST0025",
+      "date": "2025-12-16",
+      "amount": 1800.0,
+      "items": "1 x Apparel (SKU 307)",
+      "status": "Paid"
+    },
+    {
+      "invoice_id": "INV-1765826400",
+      "order_id": "",
+      "customer_id": "CUST021",
+      "date": "2025-12-16",
+      "amount": 1800.0,
+      "items": "Footwear SKU 204 x1",
+      "status": "Paid"
+    },
+    {
+      "invoice_id": "INV-1765833017",
+      "order_id": "ORD001",
+      "customer_id": "CUST005",
+      "date": "2025-12-16",
+      "amount": 1800.0,
+      "items": "Footwear (SKU 204) x1",
+      "status": "Paid"
+    }
+  ]
+}

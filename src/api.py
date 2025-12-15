@@ -53,7 +53,8 @@ class SignupRequest(BaseModel):
 # --- HELPER FUNCTIONS ---
 CUSTOMERS_FILE = os.path.join(DATA_DIR, "customers.json")
 INVOICE_FILE = os.path.join(DATA_DIR, "invoices.json")
-
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+POLICY_DOC_PATH = os.path.join(BASE_DIR, "../data/docs/policy.abfrl.pdf")
 def get_all_customers():
     try:
         with open(CUSTOMERS_FILE, "r") as f:

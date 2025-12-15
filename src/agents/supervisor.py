@@ -1,47 +1,54 @@
+from langchain_groq import ChatGroq
+from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
+from pydantic import BaseModel, Field
+from typing import Literal
 import os
 from dotenv import load_dotenv
-from typing import Literal
-from langchain_groq import ChatGroq
-from pydantic import BaseModel, Field  # Correct Pydantic import
+
+# --- IMPORT THE DETAILED PROMPT ---
 from src.agents.prompts import supervisor_prompt
 
-# 1. FORCE LOAD ENV
 load_dotenv()
 
-# 2. GET KEY
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-if not GROQ_API_KEY:
-    raise ValueError("GROQ_API_KEY is missing in supervisor.py! Check your .env file.")
+# --- 1. SETUP LLM ---
+llm = ChatGroq(
+    model="openai/gpt-oss-120b", 
+    api_key=os.getenv("GROQ_API_KEY"),
+    temperature=0
+)
 
-# 3. INITIALIZE LLM 
-# Use 'llama-3.1-8b-instant' for fast, cheap routing. 
-# Temperature 0 is CRITICAL so it strictly follows routing rules.
-llm = ChatGroq(model="llama-3.1-8b-instant", api_key=GROQ_API_KEY, temperature=0)
+members = ["RecommendationAgent", "InventoryAgent", "LoyaltyAndOffersAgent", "PaymentAgent", "FulfillmentAgent", "PostPurchaseSupportAgent"]
 
-# 4. DEFINE ROUTING STRUCTURE
-class RouteDecision(BaseModel):
-    next_agent: Literal[
-        "RecommendationAgent", 
-        "InventoryAgent", 
-        "LoyaltyAndOffersAgent", 
-        "PaymentAgent", 
-        "FulfillmentAgent", 
-        "PostPurchaseSupportAgent", 
-        "END"
-    ] = Field(description="The name of the next agent to act.")
+# --- 2. DEFINE OUTPUT SCHEMA (Pydantic Fix) ---
+class Route(BaseModel):
+    """Select the next role."""
+    next: str = Field(description="The next worker to act or FINISH")
 
-# Force the LLM to output ONLY this structure
-structured_llm = llm.with_structured_output(RouteDecision)
+# --- 3. CONSTRUCT PROMPT ---
+# We use the imported 'supervisor_prompt' which contains all your logic/rules
+prompt = ChatPromptTemplate.from_messages([
+    ("system", supervisor_prompt),
+    MessagesPlaceholder(variable_name="messages"),
+    # A final nudge to ensure it picks a valid name
+    ("system", "Based on the conversation and the rules above, who should act next? Select one of: {members} or FINISH."),
+]).partial(members=", ".join(members))
 
-# 5. THE SUPERVISOR NODE
+# --- 4. CREATE CHAIN ---
+supervisor_chain = prompt | llm.with_structured_output(Route)
+
 def supervisor_node(state):
-    messages = state["messages"]
-    
-    # We call the LLM with the supervisor instructions + chat history
-    response = structured_llm.invoke([
-        {"role": "system", "content": supervisor_prompt},
-        *messages
-    ])
-    
-    # Return the decision (e.g., "RecommendationAgent")
-    return {"next": response.next_agent}
+    try:
+        result = supervisor_chain.invoke(state)
+        next_agent = result.next if result else "FINISH"
+        
+        # Safety Check: If LLM hallucinates a name, default to safe browsing
+        if next_agent not in members and next_agent != "FINISH":
+            print(f"⚠️ Invalid Route Detected: {next_agent} -> Defaulting to RecommendationAgent")
+            next_agent = "RecommendationAgent"
+            
+        return {"next": next_agent}
+        
+    except Exception as e:
+        print(f"❌ Supervisor Error: {e}")
+        # Fail gracefully
+        return {"next": "RecommendationAgent"}
