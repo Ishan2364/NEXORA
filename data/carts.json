@@ -1,0 +1,38 @@
+{
+  "CUST020": {
+    "customer_id": "CUST020",
+    "items": [],
+    "total": 0,
+    "loyalty_tier": "Silver"
+  },
+  "CUST004": {
+    "customer_id": "CUST004",
+    "items": [
+      {
+        "sku": "1",
+        "name": "High-Rise Mom Jeans",
+        "price": 2399.0,
+        "quantity": 1
+      }
+    ],
+    "total": 2399.0
+  },
+  "CUST002": {
+    "customer_id": "CUST002",
+    "items": [],
+    "total": 0,
+    "loyalty_tier": "Bronze"
+  },
+  "CUST001": {
+    "customer_id": "CUST001",
+    "items": [],
+    "total": 0,
+    "loyalty_tier": "Gold"
+  },
+  "CUST021": {
+    "customer_id": "CUST021",
+    "items": [],
+    "total": 0,
+    "loyalty_tier": "Silver"
+  }
+}

@@ -3,60 +3,85 @@ import os
 from langchain_core.tools import tool
 from src.config import DATA_DIR
 
+# Load the new rich product data
 PRODUCTS_FILE = os.path.join(DATA_DIR, "products.json")
 
+def load_products():
+    if not os.path.exists(PRODUCTS_FILE):
+        return []
+    with open(PRODUCTS_FILE, "r") as f:
+        return json.load(f)
+
+def format_product_card(p):
+    """
+    Creates a Markdown formatted card for the Agent to read 
+    and the Frontend to render.
+    """
+    # 1. Image Logic: Markdown Image Syntax
+    # The frontend MarkdownRenderer will turn this into a real <img> tag
+    image_md = f"![{p['name']}]({p.get('image_url', '')})"
+    
+    # 2. Size & Color Logic
+    sizes = ", ".join(p.get("sizes", []))
+    colors = ", ".join(p.get("colors", []))
+    
+    # 3. Social Proof (Rating)
+    rating = p.get("social_proof", {}).get("rating", "New")
+    reviews = p.get("social_proof", {}).get("reviews_count", 0)
+
+    # 4. Construct the Card
+    return f"""
+---
+### **{p['name']}**
+{image_md}
+
+**Price:** ₹{p['price']} (MRP: ₹{p.get('mrp', p['price'])})
+**Brand:** {p.get('brand', 'Nexora')}
+**Rating:** ⭐ {rating} ({reviews} reviews)
+
+**Details:**
+- **Sizes:** {sizes}
+- **Colors:** {colors}
+- **Description:** {p.get('description', '')}
+
+**SKU:** `{p['sku']}`
+---
+"""
+
 @tool
-def search_catalog(query: str = None, category: str = None):
+def search_catalog(query: str):
     """
-    Searches the product catalog using keyword matching.
-    It ranks results based on how many query terms appear in the product info.
+    Searches the product catalog by text (name, category, tags, color).
+    Returns formatted product cards with images.
     """
-    try:
-        with open(PRODUCTS_FILE, "r") as f:
-            products = json.load(f)
+    products = load_products()
+    query = query.lower().strip()
+    
+    results = []
+    
+    # Simple Keyword Search Engine
+    for p in products:
+        # Create a giant searchable string for this product
+        searchable_text = f"{p['name']} {p['category']} {p.get('sub_category','')} {' '.join(p.get('tags', []))} {' '.join(p.get('colors', []))}".lower()
         
-        if not query and not category:
-            return products[:5]
-
-        scored_results = []
-        
-        # Prepare query terms (e.g., "Female Footwear Heels" -> ["female", "footwear", "heels"])
-        query_terms = query.lower().split() if query else []
-
+        # Check if all parts of the user query are in the product (fuzzy match)
+        # e.g., "Red Dress" -> checks if 'red' AND 'dress' exist in data
+        query_terms = query.split()
+        if all(term in searchable_text for term in query_terms):
+            results.append(p)
+    
+    # If no results, try partial match (any term)
+    if not results:
         for p in products:
-            # 1. Strict Category Filter (if specifically provided arg, not just in query)
-            if category and category.lower() not in p["category"].lower():
-                continue
-            
-            # 2. Keyword Scoring
-            # Combine all product text fields for searching
-            product_text = f"{p['name']} {p['description']} {p['category']}".lower()
-            
-            # Count how many keywords exist in this product
-            match_count = 0
-            for term in query_terms:
-                if term in product_text:
-                    match_count += 1
-            
-            # logic: If we have a query, we need at least 1 keyword match.
-            # If "heels" is in the name, match_count will be > 0.
-            if query and match_count > 0:
-                scored_results.append((p, match_count))
-            elif not query:
-                # If only filtering by category without text query
-                scored_results.append((p, 0))
-        
-        # 3. Sort by Score (Highest matches first)
-        # This puts "Premium Leather Heels" (matches 'heels', 'footwear') at the top
-        scored_results.sort(key=lambda x: x[1], reverse=True)
-        
-        # Return top 5 products (stripping the score)
-        final_results = [item[0] for item in scored_results[:5]]
-        
-        if not final_results:
-            return "No matching products found."
-            
-        return final_results
+            searchable_text = f"{p['name']} {p['category']}".lower()
+            if any(term in searchable_text for term in query_terms):
+                results.append(p)
 
-    except Exception as e:
-        return f"Error searching catalog: {str(e)}"
+    # Limit results to top 5 to avoid overwhelming the LLM
+    results = results[:5]
+    
+    if not results:
+        return "No products found matching your criteria. Suggest looking for 'Dresses', 'Heels', or 'Jackets'."
+
+    # Format output
+    return "\n".join([format_product_card(p) for p in results])

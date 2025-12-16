@@ -170,6 +170,69 @@
       "amount": 1800.0,
       "items": "Footwear (SKU 204) x1",
       "status": "Paid"
+    },
+    {
+      "invoice_id": "INV-1765900293",
+      "order_id": "ORD12345",
+      "customer_id": "CUST021",
+      "date": "2025-12-16",
+      "amount": 7398.0,
+      "items": "202 x1, 1 x1",
+      "status": "Paid"
+    },
+    {
+      "invoice_id": "INV-1765910531",
+      "order_id": "ORD001",
+      "customer_id": "CUST004",
+      "date": "2025-12-17",
+      "amount": 1800.0,
+      "items": "Premium Leather Heels (SKU-202)",
+      "status": "Paid"
+    },
+    {
+      "invoice_id": "INV-1765912486",
+      "order_id": "",
+      "customer_id": "CUST020",
+      "date": "2025-12-17",
+      "amount": 5300.0,
+      "items": "Black Patent Leather Heels (SKU-204), Burgundy Block Heels (SKU-205), High‑Rise Mom Jeans (SKU-1)",
+      "status": "Paid"
+    },
+    {
+      "invoice_id": "INV-1765913849",
+      "order_id": "ORD001",
+      "customer_id": "CUST002",
+      "date": "2025-12-17",
+      "amount": 2398.0,
+      "items": "Graphic Print Urban Tee (SKU-3) x2",
+      "status": "Paid"
+    },
+    {
+      "invoice_id": "INV-1765915124",
+      "order_id": "ORD001",
+      "customer_id": "CUST001",
+      "date": "2025-12-17",
+      "amount": 5398.0,
+      "items": "Premium Leather Heels (SKU-202), Wide-Leg Palazzo Pants (SKU-104)",
+      "status": "Paid"
+    },
+    {
+      "invoice_id": "INV-1765920087",
+      "order_id": "ORD-001",
+      "customer_id": "CUST020",
+      "date": "2025-12-17",
+      "amount": 1984.05,
+      "items": "Black Patent Leather Heels (SKU-203)",
+      "status": "Paid"
+    },
+    {
+      "invoice_id": "INV-1765921651",
+      "order_id": "ORD001",
+      "customer_id": "CUST021",
+      "date": "2025-12-17",
+      "amount": 3288.0,
+      "items": "Velvet Wrap Mini Dress, Black Patent Leather Heels",
+      "status": "Paid"
     }
   ]
 }

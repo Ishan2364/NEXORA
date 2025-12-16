@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import axios from 'axios';
 import { QRCodeSVG } from 'qrcode.react';
+import MarkdownRenderer from './components/MarkdownRenderer';
 import { 
   Smartphone, Monitor, Store, User, Sparkles, Package, 
   Lock, ArrowRight, Crown, Receipt, FileText, Download, 
@@ -117,7 +118,8 @@ const MessageBubble = ({ role, content, onPay, onInvoiceReceived }) => {
         <div className={`msg-row animate-enter ${role}`}>
             <BotAvatar role={role} />
             <div className={`bubble ${role}`}>
-                <p style={{margin:0, whiteSpace: 'pre-line'}}>{innerContent}</p>
+                {/* CHANGED HERE: Use MarkdownRenderer instead of <p> */}
+                <MarkdownRenderer content={innerContent} />
                 {extraComponent}
             </div>
         </div>
@@ -452,24 +454,34 @@ function App() {
 
   useEffect(() => { chatEndRef.current?.scrollIntoView({ behavior: "smooth" }); }, [messages, loading]);
 
-  const handleLogin = async (e) => {
+const handleLogin = async (e) => {
     e.preventDefault();
     setLoading(true);
     const cleanUser = username.trim().toUpperCase();
     const newSessionId = `${cleanUser}-${Date.now()}`;
 
     try {
-      const res = await axios.post(`${API_URL}/login`, { username: cleanUser, password });
-      setUser(cleanUser);
-      setSessionId(newSessionId);
-      setUserProfile(res.data.full_profile); 
-      setInvoices(res.data.invoices || []); 
-      
-      // Trigger Greeting based on Selected Platform
-      triggerGreeting(cleanUser, newSessionId, platform, res.data.real_name);
+        // 1. Authenticate
+        const res = await axios.post(`${API_URL}/login`, { username: cleanUser, password });
+        setUser(cleanUser);
+        setSessionId(newSessionId);
+        setUserProfile(res.data.full_profile); 
+        setInvoices(res.data.invoices || []); 
+
+        // 2. Get Context-Aware Greeting
+        try {
+            const greetRes = await axios.post(`${API_URL}/auth/greet`, {
+                user_id: cleanUser,
+                platform: platform
+            });
+            setMessages([{ role: 'bot', content: greetRes.data.greeting }]);
+        } catch (err) {
+            setMessages([{ role: 'bot', content: "Welcome back! How can I help?" }]);
+        }
+
     } catch (err) { alert("User not found."); }
     setLoading(false);
-  };
+};
 
   const handleSignup = async (e) => {
     e.preventDefault();
@@ -527,15 +539,27 @@ function App() {
     setLoading(false);
   };
 
-  const handleSignOut = () => {
-      setUser(null);
-      setMessages([]);
-      setInvoices([]);
-      setUserProfile(null);
-      setUsername("");
-      setPassword("");
-      // Platform stays selected or can be reset. Let's keep it to user choice.
-  };
+const handleSignOut = async () => {
+    if (user && messages.length > 0) {
+        console.log("Saving session context...");
+        try {
+            // Sends history to backend to be summarized
+            await axios.post(`${API_URL}/auth/logout`, {
+                user_id: user,
+                platform: platform,
+                chat_history: messages
+            });
+        } catch(e) { console.error("Save failed", e); }
+    }
+    
+    // Clear frontend state
+    setUser(null);
+    setMessages([]);
+    setUserProfile(null);
+    setInvoices([]);
+    setUsername("");
+    setPassword("");
+};
 
   // --- LOGIN RENDER ---
   if (!user) {

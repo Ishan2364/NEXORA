@@ -10,6 +10,17 @@
       "device_preference": "iOS",
       "purchase_history": [
         {
+          "date": "2025-12-17",
+          "category": "Apparel",
+          "product": "Premium Leather Heels (SKU-202), Wide-Leg Palazzo Pants (SKU-104)",
+          "sku_type": "Apparel",
+          "quantity": 1,
+          "price": 5398.0,
+          "channel": "Web",
+          "payment_method": "Online",
+          "returned": false
+        },
+        {
           "date": "2025-12-15",
           "category": "Apparel",
           "product": "Navy Blue Polo Shirt x1",
@@ -139,6 +150,17 @@
       "device_preference": "Android",
       "purchase_history": [
         {
+          "date": "2025-12-17",
+          "category": "Apparel",
+          "product": "Graphic Print Urban Tee (SKU-3) x2",
+          "sku_type": "Apparel",
+          "quantity": 1,
+          "price": 2398.0,
+          "channel": "Web",
+          "payment_method": "Online",
+          "returned": false
+        },
+        {
           "date": "2025-10-29",
           "category": "Men Casualwear",
           "product": "Slim Fit Tees",
@@ -259,6 +281,17 @@
       "loyalty_tier": "Gold",
       "device_preference": "Web",
       "purchase_history": [
+        {
+          "date": "2025-12-17",
+          "category": "Apparel",
+          "product": "Premium Leather Heels (SKU-202)",
+          "sku_type": "Apparel",
+          "quantity": 1,
+          "price": 1800.0,
+          "channel": "Web",
+          "payment_method": "Online",
+          "returned": false
+        },
         {
           "date": "2025-10-10",
           "category": "Formalwear",
@@ -689,6 +722,28 @@
       "device_preference": "Web",
       "purchase_history": [
         {
+          "date": "2025-12-17",
+          "category": "Apparel",
+          "product": "Black Patent Leather Heels (SKU-203)",
+          "sku_type": "Apparel",
+          "quantity": 1,
+          "price": 1984.05,
+          "channel": "Web",
+          "payment_method": "Online",
+          "returned": false
+        },
+        {
+          "date": "2025-12-17",
+          "category": "Apparel",
+          "product": "Black Patent Leather Heels (SKU-204), Burgundy Block Heels (SKU-205), High\u2011Rise Mom Jeans (SKU-1)",
+          "sku_type": "Apparel",
+          "quantity": 1,
+          "price": 5300.0,
+          "channel": "Web",
+          "payment_method": "Online",
+          "returned": false
+        },
+        {
           "date": "2025-12-16",
           "category": "Apparel",
           "product": "Selected items",
@@ -754,6 +809,28 @@
       "loyalty_tier": "Silver",
       "device_preference": "Web",
       "purchase_history": [
+        {
+          "date": "2025-12-17",
+          "category": "Apparel",
+          "product": "Velvet Wrap Mini Dress, Black Patent Leather Heels",
+          "sku_type": "Apparel",
+          "quantity": 1,
+          "price": 3288.0,
+          "channel": "Web",
+          "payment_method": "Online",
+          "returned": false
+        },
+        {
+          "date": "2025-12-16",
+          "category": "Apparel",
+          "product": "202 x1, 1 x1",
+          "sku_type": "Apparel",
+          "quantity": 1,
+          "price": 7398.0,
+          "channel": "Web",
+          "payment_method": "Online",
+          "returned": false
+        },
         {
           "date": "2025-12-16",
           "category": "Apparel",

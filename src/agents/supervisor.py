@@ -17,7 +17,7 @@ llm = ChatGroq(
     temperature=0
 )
 
-members = ["RecommendationAgent", "InventoryAgent", "LoyaltyAndOffersAgent", "PaymentAgent", "FulfillmentAgent", "PostPurchaseSupportAgent"]
+members = ["RecommendationAgent", "InventoryAgent", "LoyaltyAndOffersAgent", "PaymentAgent", "FulfillmentAgent", "PostPurchaseSupportAgent" ]
 
 # --- 2. DEFINE OUTPUT SCHEMA (Pydantic Fix) ---
 class Route(BaseModel):

@@ -1,12 +1,14 @@
 from langgraph.graph import StateGraph, END, START
 from langgraph.prebuilt import ToolNode, tools_condition
 from langgraph.checkpoint.memory import MemorySaver 
-from langchain_core.messages import RemoveMessage # <--- NEW IMPORT
+from langchain_core.messages import RemoveMessage
 from src.graph.state import AgentState
 from src.agents.supervisor import supervisor_node
+
+# 1. IMPORT THE NEW AGENT NODE (context_manager_node)
 from src.agents.worker_agents import (
     open_secure_payment_form, recommendation_node, inventory_node, loyalty_node, 
-    payment_node, fulfillment_node, post_purchase_node
+    payment_node, fulfillment_node, post_purchase_node, context_manager_node # <--- ADDED THIS
 )
 
 # Import all tools
@@ -19,22 +21,22 @@ from src.agents.worker_agents import (
     process_card_payment, generate_upi_qr, add_to_cart,
     create_fulfillment_order, schedule_home_delivery, generate_invoice, 
     schedule_instore_pickup, get_order_status, query_rag_tool_doc, 
-    process_refund, request_human_assistance , generate_invoice 
+    process_refund, request_human_assistance, generate_session_summary, 
+    generate_welcome_message , view_cart, clear_cart
 )
 
 def create_retail_graph():
     workflow = StateGraph(AgentState)
 
-    # --- NEW: HISTORY TRIMMER NODE ---
+    # --- HISTORY TRIMMER NODE ---
     def trim_history(state):
         messages = state["messages"]
-        # Keep only the last 15 messages to keep it fast
         if len(messages) > 15:
             return {"messages": [RemoveMessage(id=m.id) for m in messages[:-15]]}
         return {}
 
     workflow.add_node("trimmer", trim_history)
-    # ---------------------------------
+    # ----------------------------
 
     # 1. Add Nodes
     workflow.add_node("supervisor", supervisor_node)
@@ -44,6 +46,7 @@ def create_retail_graph():
     workflow.add_node("PaymentAgent", payment_node)
     workflow.add_node("FulfillmentAgent", fulfillment_node)
     workflow.add_node("PostPurchaseSupportAgent", post_purchase_node)
+    workflow.add_node("ContextManagerAgent", context_manager_node) # <--- NEW NODE ADDED
 
     # 2. Add Tools
     all_tools = [
@@ -55,13 +58,13 @@ def create_retail_graph():
         process_card_payment, generate_upi_qr, add_to_cart,
         create_fulfillment_order, schedule_home_delivery, generate_invoice,
         schedule_instore_pickup, get_order_status, query_rag_tool_doc, 
-        process_refund, request_human_assistance , open_secure_payment_form 
-        
+        process_refund, request_human_assistance, open_secure_payment_form,
+        generate_invoice, generate_session_summary, generate_welcome_message ,
+        view_cart, clear_cart
     ]
     workflow.add_node("tools", ToolNode(all_tools))
 
     # 3. Define Edges
-    # START -> TRIMMER -> SUPERVISOR
     workflow.add_edge(START, "trimmer")
     workflow.add_edge("trimmer", "supervisor")
 
@@ -72,7 +75,16 @@ def create_retail_graph():
     )
 
     # Agent -> Tools OR End
-    members = ["RecommendationAgent", "InventoryAgent", "LoyaltyAndOffersAgent", "PaymentAgent", "FulfillmentAgent", "PostPurchaseSupportAgent"]
+    # 4. ADD THE NEW AGENT NAME TO THIS LIST
+    members = [
+        "RecommendationAgent", 
+        "InventoryAgent", 
+        "LoyaltyAndOffersAgent", 
+        "PaymentAgent", 
+        "FulfillmentAgent", 
+        "PostPurchaseSupportAgent",
+        "ContextManagerAgent" # <--- ADDED THIS
+    ]
     
     for member in members:
         workflow.add_conditional_edges(

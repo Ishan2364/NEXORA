@@ -12,7 +12,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from langchain_core.messages import HumanMessage
 from src.graph.workflow import create_retail_graph
 from src.config import DATA_DIR 
-
+from src.agents.worker_agents import generate_session_summary, generate_welcome_message
 # --- INIT ---
 app = FastAPI(title="Nexora Retail Agent API")
 
@@ -153,3 +153,48 @@ async def chat(request: ChatRequest):
         return {"response": final_res}
     except Exception as e:
         return {"response": "⚠️ System busy."}
+    
+    # --- NEW DATA MODELS ---
+class LogoutRequest(BaseModel):
+    user_id: str
+    platform: str
+    chat_history: list  # Expecting list of {role, content} objects
+
+class LoginRequest(BaseModel):
+    user_id: str
+    platform: str
+
+# --- NEW ENDPOINTS ---
+
+@app.post("/auth/logout")
+async def logout_user(req: LogoutRequest):
+    """Triggers on Sign Out: AI summarizes the session and saves to disk"""
+    print(f"💾 Saving context for {req.user_id}...")
+    
+    try:
+        # FIX: Use .invoke() with a dictionary because it is a Tool
+        result = generate_session_summary.invoke({
+            "cust_id": req.user_id, 
+            "platform": req.platform, 
+            "chat_history": req.chat_history
+        })
+        return {"status": "success", "message": result}
+    except Exception as e:
+        print(f"❌ Logout Error: {e}")
+        return {"status": "error", "message": str(e)}
+
+@app.post("/auth/greet")
+async def greet_user(req: LoginRequest):
+    """Triggers on Login: AI reads disk and generates custom greeting"""
+    print(f"👋 Generating greeting for {req.user_id}...")
+    
+    try:
+        # FIX: Use .invoke() with a dictionary
+        greeting = generate_welcome_message.invoke({
+            "cust_id": req.user_id, 
+            "current_platform": req.platform
+        })
+        return {"greeting": greeting}
+    except Exception as e:
+        print(f"❌ Greeting Error: {e}")
+        return {"greeting": f"Welcome back to Nexora {req.platform}!"}

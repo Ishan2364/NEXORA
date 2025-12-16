@@ -1,0 +1,73 @@
+/* src/components/MarkdownRenderer.css */
+
+.markdown-content {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+/* Bold Text */
+.markdown-content strong {
+  color: #FFD700; /* Gold color for dark mode emphasis */
+  font-weight: 700;
+}
+
+/* Table Styling */
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0;
+  font-size: 0.9em;
+  background-color: #1e1e1e; /* Dark background for rows */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.styled-table thead tr {
+  background-color: #333;
+  color: #ffffff;
+  text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+  border: 1px solid #444; /* Grid lines */
+}
+
+.styled-table tbody tr {
+  border-bottom: 1px solid #333;
+}
+
+.styled-table tbody tr:last-of-type {
+  border-bottom: 2px solid #FFD700; /* Gold bottom border */
+}
+
+/* Lists */
+.markdown-content ul, .markdown-content ol {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+/* --- NEW IMAGE STYLING --- */
+.markdown-content img {
+  width: 100%;            /* Fill the container width */
+  max-width: 250px;       /* Stop it from getting huge */
+  height: 180px;          /* Force a fixed height */
+  object-fit: cover;      /* Smart crop: ensures image fills the box without stretching */
+  border-radius: 12px;    /* Nice rounded corners */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* On mobile, we can let it go slightly wider but keep height fixed */
+@media (max-width: 480px) {
+  .markdown-content img {
+    max-width: 100%; 
+    height: 200px;
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "CUST020": {
+    "last_platform": "Website",
+    "timestamp": "2025-12-17 02:54:56",
+    "summary": "Ishan browsed heels, selected the Black Patent Leather Heels (SKU-203), added them to the cart, received a total of \u20b91,984.05 after discounts, completed payment via UPI, and received a receipt (Invoice ID INV-1765920087, Order ID ORD-001).",
+    "last_purchased": "Black Patent Leather Heels (SKU-203) \u2013 \u20b91,984.05 (Invoice ID: INV-1765920087, Order ID: ORD-001)",
+    "pending_actions": []
+  },
+  "CUST005": {
+    "last_platform": "Website",
+    "timestamp": "2025-12-16 19:16:22",
+    "summary": "The customer (CUST005) is shopping for Diwali ethnic wear and chose the Printed Cotton Kurti (SKU\u202f103) priced at \u20b91,299. The bot added the item to the cart after confirming the customer ID.",
+    "last_purchased": null,
+    "pending_actions": [
+      "Review cart total and any Diwali promotions",
+      "Proceed to checkout",
+      "Confirm payment and shipping details"
+    ]
+  },
+  "CUST004": {
+    "last_platform": "Website",
+    "timestamp": "2025-12-17 00:24:46",
+    "summary": "Kabir is a Gold member who recently purchased Premium Leather Heels. The bot greeted him and thanked him for shopping again.",
+    "last_purchased": "Premium Leather Heels",
+    "pending_actions": []
+  },
+  "CUST002": {
+    "last_platform": "Website",
+    "timestamp": "2025-12-17 01:18:05",
+    "summary": "Arjun purchased a Graphic Print Urban Tee with a \u20b9200 discount paid via UPI. He now wants to return the T\u2011shirts from his most recent order (ORD001). The order is currently out for delivery, so a return cannot be started yet. The bot offered two options: (1) refuse the package when the courier arrives, or (2) accept the delivery and then arrange a free pickup (or drop\u2011off) for the return. Arjun has not yet indicated which option he prefers.",
+    "last_purchased": "Graphic Print Urban Tee (\u20b9200 discount, paid via UPI)",
+    "pending_actions": [
+      "User must choose a return method: refuse the package on delivery or accept delivery and schedule a pickup"
+    ]
+  },
+  "CUST001": {
+    "last_platform": "Kiosk",
+    "timestamp": "2025-12-17 01:29:37",
+    "summary": "Riya returned to the kiosk, selected Premium Leather Heels and added them to her cart. To qualify for a \u20b9500 discount on orders over \u20b95,000, she also added Wide\u2011Leg Palazzo Pants. After confirming the cart total, she proceeded to payment and completed the purchase with a card. The system provided a receipt (INV-1765915124) showing a final amount of \u20b95,398. Riya then asked about Nexora's return policy, which the bot explained in detail.",
+    "last_purchased": "Premium Leather Heels, Wide-Leg Palazzo Pants",
+    "pending_actions": []
+  },
+  "CUST021": {
+    "last_platform": "Website",
+    "timestamp": "2025-12-17 03:19:34",
+    "summary": "The user, Kanishk, was greeted about their recent purchase of a Velvet Wrap Mini Dress and black patent leather heels. They inquired about order ORD001, which the bot confirmed is out for delivery. The bot asked for a chat rating and further assistance, to which the user responded positively with \"nice\". The bot's last message was incomplete.",
+    "last_purchased": "Velvet Wrap Mini Dress and black patent leather heels",
+    "pending_actions": [
+      "Ask the user to rate the chat experience.",
+      "Confirm if the user needs any further assistance or has any other questions."
+    ]
+  },
+  "CUST0025": {
+    "last_platform": "Website",
+    "timestamp": "2025-12-17 03:09:29",
+    "summary": "Apoorv is searching for red dresses. The bot presented three options\u2014Velvet Wrap Mini Dress (SKU 1), Sequin Bodycon Dress (SKU 2), and Ruffled Off-Shoulder Dress (SKU 3)\u2014including prices, brands, ratings, sizes, and brief descriptions.",
+    "last_purchased": "",
+    "pending_actions": [
+      "Select a dress SKU to purchase",
+      "Ask for additional size or fit information",
+      "Request more product images or details"
+    ]
+  }
+}
